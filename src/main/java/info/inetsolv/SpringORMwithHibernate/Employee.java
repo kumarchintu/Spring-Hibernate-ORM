@@ -2,8 +2,10 @@ package info.inetsolv.SpringORMwithHibernate;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name="emp_tbl")
 public class Employee {
 
 	@Id
@@ -17,18 +19,24 @@ public class Employee {
 		this.ename = ename;
 		this.salary = salary;
 	}
+
+	public Employee() {
+	}
+
 	public Integer getEno() {
 		return eno;
 	}
 	public void setEno(Integer eno) {
 		this.eno = eno;
 	}
+	
 	public String getEname() {
 		return ename;
 	}
 	public void setEname(String ename) {
 		this.ename = ename;
 	}
+	
 	public double getSalary() {
 		return salary;
 	}
